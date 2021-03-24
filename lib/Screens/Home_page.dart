@@ -26,7 +26,40 @@ class _HomePageState extends State<HomePage> {
                       width: MediaQuery.of(context).size.width * 0.3,
                     ),
                   ),
-                  Container()
+                  Expanded(
+                    child: SingleChildScrollView(
+                      scrollDirection: Axis.horizontal,
+                      reverse: true,
+                      child: Row(
+                        children: [
+                          Box(
+                            date: 'Friday, 9th April 2021',
+                            match: 'MI VS RCB',
+                            time: '19:30 IST',
+                            venue: 'Chennai',
+                          ),
+                          Box(
+                            date: 'Wednesday, 14th April 2021',
+                            match: 'SRH VS RCB',
+                            time: '19:30 IST',
+                            venue: 'Chennai',
+                          ),
+                          Box(
+                            date: 'Sunday, 18th April 2021',
+                            match: 'RCB VS KKR',
+                            time: '15:30 IST',
+                            venue: 'Chennai',
+                          ),
+                          Box(
+                            date: 'Thursday, 22nd April 20211',
+                            match: 'RCB VS RR',
+                            time: '19:30 IST',
+                            venue: 'Mumbai',
+                          ),
+                        ],
+                      ),
+                    ),
+                  )
                 ],
               ),
             ),
@@ -63,26 +96,50 @@ class _HomePageState extends State<HomePage> {
 }
 
 class Box extends StatelessWidget {
-  final double height;
-  Box({this.height});
+  final String date, match, time, venue;
+  Box({this.date, this.match, this.time, this.venue});
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: height,
-      decoration: BoxDecoration(
-        color: Colors.red,
-        borderRadius: BorderRadius.all(
-          Radius.circular(13.0),
-        ),
-        boxShadow: [
-          BoxShadow(
-            color: Colors.black12.withOpacity(0.2),
-            spreadRadius: 3,
-            blurRadius: 5,
-            offset: Offset(0, 5), // changes position of shadow
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Container(
+        height: 120.0,
+        width: 170.0,
+        decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.all(
+            Radius.circular(13.0),
           ),
-        ],
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black12.withOpacity(0.2),
+              spreadRadius: 3,
+              blurRadius: 5,
+              offset: Offset(0, 5), // changes position of shadow
+            ),
+          ],
+        ),
+        child: Column(
+          children: [
+            Details(date, 10.0),
+            Details(match, 20.0),
+            Details(time, 10.0),
+            Details(venue, 10.0)
+          ],
+        ),
       ),
     );
   }
+}
+
+Widget Details(String details, double fSize) {
+  return Padding(
+    padding: const EdgeInsets.only(top: 8.0),
+    child: Text(
+      details,
+      style: GoogleFonts.poppins(
+        fontSize: fSize,
+      ),
+    ),
+  );
 }
