@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
+import 'package:rcb_app/Screens/Team_page.dart';
 
 import 'Home_page.dart';
 
@@ -9,6 +10,7 @@ TextStyle optionStyle = TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
 
 List<Widget> _pages = <Widget>[
   HomePage(),
+  TeamPage(),
 ];
 
 class MainNav extends StatefulWidget {
@@ -73,9 +75,9 @@ class _MainNavState extends State<MainNav> {
                       text: 'Home',
                     ),
                     GButton(
-                      icon: FontAwesomeIcons.globeAsia,
+                      icon: Icons.sports_cricket,
                       backgroundColor: Colors.red,
-                      text: 'Planets',
+                      text: 'Team',
                     ),
                     GButton(
                       icon: Icons.photo,
