@@ -40,8 +40,6 @@ class _TeamContainerState extends State<TeamContainer> {
           });
         });
       },
-
-      // THIS WIDGET HELPS US TO MAKE THE CARD TOUCH REACTIVE...
       child: AnimatedPadding(
         duration: Duration(milliseconds: 150),
         padding: EdgeInsets.only(
@@ -52,7 +50,6 @@ class _TeamContainerState extends State<TeamContainer> {
         ),
         child: Stack(
           children: [
-            //THIS WIDGET IS ADDED INORDER TO GIVE US SOME ELEVATION...
             Card(
               elevation: 10.0,
               shape: RoundedRectangleBorder(
@@ -67,7 +64,6 @@ class _TeamContainerState extends State<TeamContainer> {
                       alignment: Alignment.center,
                       child: Container(
                         width: double.infinity,
-                        //THIS DECORATION WILL HELP US TO GIVE THE NICE GRADIENT ABOVE THE IMAGE...
                         foregroundDecoration: BoxDecoration(
                           gradient: LinearGradient(
                             begin: Alignment.topCenter,
@@ -87,26 +83,6 @@ class _TeamContainerState extends State<TeamContainer> {
                         ),
                       ),
                     ),
-                    // Align(
-                    //   alignment: Alignment.bottomRight,
-                    //   child: Padding(
-                    //     padding: const EdgeInsets.all(16.0),
-                    //     child: Container(
-                    //       height: 35.0,
-                    //       child: FloatingActionButton(
-                    //         child: Text(
-                    //           '+',
-                    //           style: TextStyle(fontSize: 28.0),
-                    //         ),
-                    //         mini: true,
-                    //         onPressed: () {},
-                    //         splashColor: Colors.black,
-                    //       ),
-                    //     ),
-                    //   ),
-                    // ),
-
-                    //THIS IS FOR THE TEXT ABOVE THE IMAGE...
                     Align(
                       alignment: Alignment.bottomLeft,
                       child: Container(
@@ -131,18 +107,6 @@ class _TeamContainerState extends State<TeamContainer> {
                                 fontWeight: FontWeight.normal,
                               ),
                             ),
-                            // Padding(
-                            //   padding: const EdgeInsets.only(top: 8.0),
-                            //   child: Text(
-                            //     'Right Hand Batsmen',
-                            //     style: TextStyle(
-                            //       color: Colors.white,
-                            //       fontSize: 25.0,
-                            //       fontWeight: FontWeight.normal,
-                            //       fontFamily: 'SlimPlay',
-                            //     ),
-                            //   ),
-                            // ),
                           ],
                         ),
                       ),
@@ -151,8 +115,6 @@ class _TeamContainerState extends State<TeamContainer> {
                 ),
               ),
             ),
-
-            // THIS WIDGET IS TO ADD THE TEXT ABOVE THE FIRST LIST ITEM...
             (widget.index == '0')
                 ? OverflowBox(
                     minWidth: 0.0,
