@@ -1,6 +1,6 @@
-# rcb_app
+# Royal Challengers Bangalore App
 
-A new Flutter application.
+App for RCB's fans to know the team.
 
 ## Getting Started
 
