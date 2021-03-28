@@ -2,7 +2,7 @@
 
 App for RCB's fans to know the team.
 
-<img src="https://github.com/sainiteshb/RCB-App/blob/main/assets/readme.png"  width = 500 height = 300/>
+<img src="https://github.com/sainiteshb/RCB-App/blob/main/assets/readme.png"  width = 450 height = 300/>
 
 # Download & Install
 First, clone the repository with the 'clone' command, or just download the zip.
