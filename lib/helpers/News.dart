@@ -6,14 +6,14 @@ import 'package:rcb_app/Screens/ArticlePage.dart';
 import 'package:rcb_app/Screens/NewsPage.dart';
 import 'article.dart';
 
-String apiKey = "dd07503a09c44a9f897a16d3d8251ef1";
+String apiKey = "API-KEY";
 
 class News {
   List<Article> news = [];
 
   Future<void> getNews() async {
     String url =
-        "http://newsapi.org/v2/everything?q=astronomy&language=en&sortBy=publishedAt&apiKey=${apiKey}";
+        "http://newsapi.org/v2/everything?q=royalchallengersbangalore&language=en&sortBy=publishedAt&apiKey=${apiKey}";
 
     var response = await http.get(url);
 
