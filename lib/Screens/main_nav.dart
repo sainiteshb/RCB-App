@@ -92,7 +92,7 @@ class _MainNavState extends State<MainNav> {
                       backgroundColor: Colors.red,
                       iconColor: Colors.white,
                       icon: FontAwesomeIcons.rocket,
-                      text: 'Explore',
+                      text: 'Connect',
                     ),
                   ],
                   selectedIndex: _selectedIndex,
