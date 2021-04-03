@@ -91,7 +91,7 @@ class _MainNavState extends State<MainNav> {
                     GButton(
                       backgroundColor: Colors.red,
                       iconColor: Colors.white,
-                      icon: FontAwesomeIcons.rocket,
+                      icon: null,
                       text: 'Connect',
                     ),
                   ],
